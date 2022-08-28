@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/js/app.js"></script>
+    <title>MOKEPON!</title>
+  </head>
+  <body>
+    <h1>MOKEPON! 🔥💧🌱</h1>
+    <section id="pets">
+      <h2>Choose your pet:</h2>
+      <label for="hipodoge">
+        <input id="hipodoge" type="radio" name="pet" /> Hipodoge
+      </label>
+      <label for="capipepo">
+        <input id="capipepo" type="radio" name="pet" /> Capipepo
+      </label>
+      <label for="ratigueya">
+        <input id="ratigueya" type="radio" name="pet" /> Ratigueya
+      </label>
+      <!--
+      <label for="langostelvis">
+        <input id="langostelvis" type="radio" name="mascota" /> Langostelvis
+      </label>
+      <label for="tucapalma">
+        <input id="tucapalma" type="radio" name="mascota" /> Tucapalma
+      </label>
+      <label for="pydos">
+        <input id="pydos" type="radio" name="mascota" /> Pydos
+      </label>
+      -->
+      <button id="pet-select-button">Select this pet!</button>
+      <div id="pet-status">
+        <p>
+          Player's pet: <span id="player-pet-name"> - </span> has
+          <span id="player-lifes"> - </span> lives.
+        </p>
+        <p>
+          Enemy's pet: <span id="enemy-pet-name"> - </span> has
+          <span id="enemy-lifes"> - </span> lives.
+        </p>
+      </div>
+    </section>
+    <section id="attacks">
+      <h2>Choose an attack:</h2>
+      <div>
+        <button id="fire-attack-button">Fire Attack 🔥</button>
+        <button id="water-attack-button">Water Attack 💧</button>
+        <button id="ground-attack-button">Ground Attack 🌱</button>
+      </div>
+    </section>
+    <!-- Current game status -->
+    <section id="info"></section>
+    <section id="new-game">
+      <button id="reload-button">Restart Game</button>
+    </section>
+  </body>
+</html>
