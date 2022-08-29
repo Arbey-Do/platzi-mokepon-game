@@ -25,6 +25,7 @@ let startGame = () => {
 
   let gameStatus = null;
 
+  const petLabels = document.getElementsByClassName("pets__label");
   const inputHipodoge = document.querySelector("#hipodoge");
   const inputCapipepo = document.querySelector("#capipepo");
   const inputRatihueya = document.querySelector("#ratigueya");
@@ -169,6 +170,7 @@ let startGame = () => {
     showPlayerPet();
     showEnemyPet();
     petStatus.style.display = "block";
+    showReloadButton();
   };
 
   const hideAttacks = () => {
@@ -179,13 +181,35 @@ let startGame = () => {
     attacksSection.style.display = "block";
   };
 
+  const showReloadButton = () => {
+    reloadButton.style.display = "inline-block";
+  };
+
+  const hideReloadButton = () => {
+    reloadButton.style.display = "none";
+  };
+
+  const selectPet = () => {
+    selectPetButton.disabled = false;
+    selectPetButton.classList.add("enabled-button");
+  };
+
+  const setPetLabelListeners = () => {
+    for (let item of petLabels) {
+      item.addEventListener("click", selectPet);
+    }
+  };
+
   selectPetButton.addEventListener("click", selectPlayerPet);
   fireAttackButton.addEventListener("click", playFireAttack);
   waterAttackButton.addEventListener("click", playWaterAttack);
   groundAttackButton.addEventListener("click", playGroundAttack);
   reloadButton.addEventListener("click", reloadGame);
+  selectPetButton.disabled = true;
+  setPetLabelListeners();
   hidePetStatus();
   hideAttacks();
+  hideReloadButton();
 };
 
 // Waits the HTML is completly loaded to start the game.

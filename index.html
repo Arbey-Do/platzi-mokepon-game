@@ -4,23 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="./assets/js/app.js"></script>
     <title>MOKEPON!</title>
   </head>
   <body>
-    <h1>MOKEPON! 🔥💧🌱</h1>
-    <section id="pets">
-      <h2>Choose your pet:</h2>
-      <label for="hipodoge">
-        <input id="hipodoge" type="radio" name="pet" /> Hipodoge
-      </label>
-      <label for="capipepo">
-        <input id="capipepo" type="radio" name="pet" /> Capipepo
-      </label>
-      <label for="ratigueya">
-        <input id="ratigueya" type="radio" name="pet" /> Ratigueya
-      </label>
-      <!--
+    <section id="pets" class="menu pets">
+      <h1 class="main-title game-title">MOKEPON!</h1>
+      <h2 class="sub-title">Choose your pet:</h2>
+      <button id="pet-select-button" class="button sub-title">
+        Select this pet!
+      </button>
+      <div class="pets__list">
+        <label class="pets__label" for="hipodoge">
+          <img class="pets__img" src="https://i.imgur.com/8v8aPPJ.png" alt="" />
+          <p class="pets__name">Hipodoge</p>
+          <input id="hipodoge" class="pets__input" type="radio" name="pet" />
+        </label>
+        <label class="pets__label" for="capipepo">
+          <img class="pets__img" src="https://i.imgur.com/PywjZze.png" alt="" />
+          <p class="pets__name">Capipepo</p>
+          <input id="capipepo" class="pets__input" type="radio" name="pet" />
+        </label>
+        <label class="pets__label" for="ratigueya">
+          <img class="pets__img" src="https://i.imgur.com/58wdk9a.png" alt="" />
+          <p class="pets__name">Ratigueya</p>
+          <input id="ratigueya" class="pets__input" type="radio" name="pet" />
+        </label>
+      </div>
+    </section>
+    <!--
       <label for="langostelvis">
         <input id="langostelvis" type="radio" name="mascota" /> Langostelvis
       </label>
@@ -31,7 +50,7 @@
         <input id="pydos" type="radio" name="mascota" /> Pydos
       </label>
       -->
-      <button id="pet-select-button">Select this pet!</button>
+    <section>
       <div id="pet-status">
         <p>
           Player's pet: <span id="player-pet-name"> - </span> has

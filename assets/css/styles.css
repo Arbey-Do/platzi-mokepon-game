@@ -1,0 +1,114 @@
+/*TAGS GLOBALS STYLES*/
+:root {
+  --main-background-color: #363636;
+  --main-title-color: rgb(67 118 193);
+  --just-text-color: rgb(199 199 199);
+  --disabled-color: rgb(100 100 100);
+  --disabled-background-color: transparent;
+  --enabled-color: var(--main-title-color);
+  --enabled-background-color: rgb(67 118 193 / 18%);
+  --pet-size: 8rem;
+}
+
+html {
+  font-size: 62.5%; /* sets 1rem to 10px */
+  font-family: "Silkscreen", cursive;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-background-color);
+  color: var(--just-text-color);
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.sub-title {
+  font-size: 2.4rem;
+}
+
+.game-title {
+  color: var(--main-title-color);
+}
+
+.menu {
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pets__label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.2rem solid var(--disabled-color);
+  border-radius: 1rem;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+}
+
+.pets__input {
+  display: none;
+}
+
+.pets__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.pets__label:hover,
+.pets__label:active {
+  border-color: var(--enabled-color);
+  background-color: var(--enabled-background-color);
+}
+
+.pets__img {
+  width: var(--pet-size);
+  height: var(--pet-size);
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  color: var(--disabled-color);
+  border: 0.2rem solid var(--disabled-color);
+  background-color: var(--disabled-background-color);
+  font-family: inherit;
+}
+
+/* .disabled-button {
+  
+} */
+
+.enabled-button {
+  color: var(--enabled-color);
+  border: 0.2rem solid var(--enabled-color);
+  background-color: var(--enabled-background-color);
+}
+
+@media (min-width: 600px) {
+  .pets__list {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 720px;
+  }
+}
