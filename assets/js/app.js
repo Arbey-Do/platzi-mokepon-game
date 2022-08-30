@@ -25,7 +25,9 @@ let startGame = () => {
 
   let gameStatus = null;
 
-  const petLabels = document.getElementsByClassName("pets__label");
+  const minPet = 0;
+  const maxPet = 2;
+
   const inputHipodoge = document.querySelector("#hipodoge");
   const inputCapipepo = document.querySelector("#capipepo");
   const inputRatihueya = document.querySelector("#ratigueya");
@@ -41,9 +43,7 @@ let startGame = () => {
   const reloadButton = document.querySelector("#reload-button");
   const attacksSection = document.querySelector("#attacks");
   const petStatus = document.querySelector("#pet-status");
-
-  const minPet = 0;
-  const maxPet = 2;
+  const menuButtons = document.querySelector(".buttons-menu");
 
   const playFireAttack = () => {
     playerAttack = fire;
@@ -189,24 +189,39 @@ let startGame = () => {
     reloadButton.style.display = "none";
   };
 
-  const selectPet = () => {
-    selectPetButton.disabled = false;
+  const selectPet = (event) => {
+    // showMenu();
     selectPetButton.classList.add("enabled-button");
   };
 
   const setPetLabelListeners = () => {
+    const petLabels = document.getElementsByClassName("pets__label");
     for (let item of petLabels) {
       item.addEventListener("click", selectPet);
     }
   };
 
-  selectPetButton.addEventListener("click", selectPlayerPet);
+  const hideSelectPetButton = () => {
+    selectPetButton.style.display = "none";
+  };
+
+  // const showSelectPetButton = () => {
+  //   selectPetButton.style.display = "block";
+  // };
+
+  const showMenu = () => {
+    menuButtons.style.display = "flex";
+  };
+
+  const hideMenu = () => {};
+
+  // selectPetButton.addEventListener("click", selectPlayerPet);
   fireAttackButton.addEventListener("click", playFireAttack);
   waterAttackButton.addEventListener("click", playWaterAttack);
   groundAttackButton.addEventListener("click", playGroundAttack);
   reloadButton.addEventListener("click", reloadGame);
-  selectPetButton.disabled = true;
   setPetLabelListeners();
+  // hideSelectPetButton();
   hidePetStatus();
   hideAttacks();
   hideReloadButton();

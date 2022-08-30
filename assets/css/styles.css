@@ -3,11 +3,13 @@
   --main-background-color: #363636;
   --main-title-color: rgb(67 118 193);
   --just-text-color: rgb(199 199 199);
+  --just-white: #fff;
   --disabled-color: rgb(100 100 100);
   --disabled-background-color: transparent;
   --enabled-color: var(--main-title-color);
   --enabled-background-color: rgb(67 118 193 / 18%);
   --pet-size: 8rem;
+  --center-margin: 0 auto;
 }
 
 html {
@@ -87,6 +89,18 @@ body {
   height: var(--pet-size);
 }
 
+.buttons-menu {
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(54, 54, 54, 0.911);
+}
+
 .button {
   padding: 0.5rem 1rem;
   border-radius: 1.5rem;
@@ -94,6 +108,10 @@ body {
   border: 0.2rem solid var(--disabled-color);
   background-color: var(--disabled-background-color);
   font-family: inherit;
+}
+
+.pets__button {
+  /* display: none; */
 }
 
 /* .disabled-button {
@@ -111,4 +129,58 @@ body {
     grid-template-columns: repeat(3, 1fr);
     max-width: 720px;
   }
+}
+
+.welcome {
+  position: absolute;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(9, 9, 9, 0.9);
+}
+
+.welcome__content {
+  /* width: 80%; */
+  border: 0.2rem solid var(--disabled-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  padding: 2rem;
+  color: var(--just-white);
+}
+
+.welcome__title {
+  font-size: 2rem;
+  color: var(--main-title-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome__text {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.welcome__button {
+  align-self: stretch;
+  font-size: 2.5rem;
+  border-radius: 3rem;
+  padding: 1rem;
+  /* background: transparent; */
+}
+
+.welcome__button:hover,
+.welcome__button:active {
+  background-color: rgba(67, 117, 193, 0.41);
+  color: var(--just-white);
+}
+
+.call-to-action {
+  color: rgb(255 237 24);
 }
