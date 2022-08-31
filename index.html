@@ -15,27 +15,54 @@
     <title>MOKEPON!</title>
   </head>
   <body>
-    <section id="pets" class="menu pets">
-      <h1 class="main-title game-title">MOKEPON!</h1>
-      <h2 class="sub-title">Choose your pet:</h2>
-      <div class="pets__list">
-        <label class="pets__label" for="hipodoge">
-          <img class="pets__img" src="https://i.imgur.com/8v8aPPJ.png" alt="" />
-          <p class="pets__name">Hipodoge</p>
-        </label>
-        <input id="hipodoge" class="pets__input" type="radio" name="pet" />
-        <label class="pets__label" for="capipepo">
-          <img class="pets__img" src="https://i.imgur.com/PywjZze.png" alt="" />
-          <p class="pets__name">Capipepo</p>
-        </label>
-        <input id="capipepo" class="pets__input" type="radio" name="pet" />
-        <label class="pets__label" for="ratigueya">
-          <img class="pets__img" src="https://i.imgur.com/58wdk9a.png" alt="" />
-          <p class="pets__name">Ratigueya</p>
-        </label>
-        <input id="ratigueya" class="pets__input" type="radio" name="pet" />
-      </div>
-    </section>
+    <h1 class="title game-title">MOKEPON!</h1>
+    <div class="game-display">
+      <section id="controls" class="controls">
+        <!-- active -->
+        <button id="select-pet" class="button control-button enabled-button">
+          Select Pet
+        </button>
+        <!-- default disabled -->
+        <button
+          id="restart-button"
+          class="button control-button enabled-button"
+        >
+          Restart
+        </button>
+      </section>
+      <section id="pets-menu" class="pets-menu">
+        <h2 class="sub-title">Choose your pet:</h2>
+        <div class="pets__list">
+          <label class="pets__label" for="hipodoge">
+            <img
+              class="pets__img"
+              src="https://i.imgur.com/8v8aPPJ.png"
+              alt=""
+            />
+            <p class="pets__name">Hipodoge</p>
+          </label>
+          <input id="hipodoge" class="pets__input" type="radio" name="pet" />
+          <label class="pets__label" for="capipepo">
+            <img
+              class="pets__img"
+              src="https://i.imgur.com/PywjZze.png"
+              alt=""
+            />
+            <p class="pets__name">Capipepo</p>
+          </label>
+          <input id="capipepo" class="pets__input" type="radio" name="pet" />
+          <label class="pets__label" for="ratigueya">
+            <img
+              class="pets__img"
+              src="https://i.imgur.com/58wdk9a.png"
+              alt=""
+            />
+            <p class="pets__name">Ratigueya</p>
+          </label>
+          <input id="ratigueya" class="pets__input" type="radio" name="pet" />
+        </div>
+      </section>
+    </div>
     <!--
       <label for="langostelvis">
         <input id="langostelvis" type="radio" name="mascota" /> Langostelvis
@@ -77,22 +104,29 @@
         Select this pet!
       </button>
     </section> -->
+
+    <!-- Welcome menu section, first thing we see when enter the page -->
     <section class="welcome">
-      <div class="welcome__content">
-        <h2 class="welcome__title">Bienvenido a Mokepon!</h2>
-        <p class="welcome__text">
-          ¿Estás listo para un combate mokepon? ¡Espero que si!
-        </p>
-        <p class="welcome__text">
-          Juega contra la computadora con el mokepon que tu elijas
-        </p>
-        <p class="welcome__text">
-          <span class="call-to-action">!Veamos quién gana esta batalla!</span>
-        </p>
+      <div class="welcome__wrap">
+        <div class="welcome__content">
+          <h2 class="welcome__title">Bienvenido a Mokepon!</h2>
+          <p class="welcome__text">
+            ¿Estás listo para un combate mokepon? ¡Espero que si!
+          </p>
+          <p class="welcome__text">
+            Juega contra la computadora con el mokepon que tu elijas
+          </p>
+          <p class="welcome__text">
+            <span class="call-to-action">!Veamos quién gana esta batalla!</span>
+          </p>
+        </div>
+        <button
+          id="welcome__button"
+          class="button enabled-button welcome__button"
+        >
+          Jugar <strong class="welcome__emoji">👊🏼😉</strong>
+        </button>
       </div>
-      <button class="button enabled-button welcome__button">
-        Jugar <strong class="welcome__emoji">👊🏼😉</strong>
-      </button>
     </section>
   </body>
 </html>

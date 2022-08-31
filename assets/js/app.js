@@ -44,6 +44,8 @@ let startGame = () => {
   const attacksSection = document.querySelector("#attacks");
   const petStatus = document.querySelector("#pet-status");
   const menuButtons = document.querySelector(".buttons-menu");
+  const welcomeMenu = document.querySelector(".welcome");
+  const welcomeButton = document.querySelector("#welcome__button");
 
   const playFireAttack = () => {
     playerAttack = fire;
@@ -213,8 +215,11 @@ let startGame = () => {
     menuButtons.style.display = "flex";
   };
 
-  const hideMenu = () => {};
+  const hideWelcomeMenu = () => {
+    welcomeMenu.style.display = "none";
+  };
 
+  welcomeButton.addEventListener("click", hideWelcomeMenu);
   // selectPetButton.addEventListener("click", selectPlayerPet);
   fireAttackButton.addEventListener("click", playFireAttack);
   waterAttackButton.addEventListener("click", playWaterAttack);
